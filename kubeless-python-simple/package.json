@@ -5,9 +5,15 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "kubernetes-client": "^3.10.1",
-    "kubeless-serverless": "^0.0.1"
+    "kubeless-serverless": "^0.0.1",
+    "snyk": "^1.189.0"
   },
   "main": "handler.py",
   "autor": "Bitnami",
-  "license": "ASL"
+  "license": "ASL",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }	   
